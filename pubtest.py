@@ -78,6 +78,9 @@ try:
         if distance >= 30:
             print("물건이 범위 밖에 있습니다")
             GPIO.output(LED, GPIO.HIGH)
+            value = json.dumps(sensing)
+            client.publish(MQTT_PUB_TOPIC,value)
+            print(value)
             p.start(50)
             time.sleep(1)
             p.stop()
@@ -99,4 +102,3 @@ except KeyboardInterrupt:
 finally:
     GPIO.cleanup()
    
-
