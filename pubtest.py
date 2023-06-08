@@ -20,6 +20,7 @@ client = mqtt.Client()
 client.connect(MQTT_HOST,MQTT_PORT,MQTT_KEEPALSE_INTERVAL )
 client.loop_start()
 
+
 try:
     while True:
         try:
