@@ -15,7 +15,6 @@ buzzer = 12
 
 
 LED = 23
-
 TRIG = 19
 ECHO = 13
 
